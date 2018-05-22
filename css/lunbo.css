@@ -1,0 +1,88 @@
+*{
+	margin:0;
+	padding:0;
+}
+ul{
+	list-style: none;
+}
+body{
+	font-family: "微软雅黑";
+	color:#14191e;
+}
+.main{
+	width:1200px;
+	height:460px;
+	margin: 30px auto;
+	overflow:hidden;
+	position: relative;
+}
+.banner{
+	width:1200px;
+	height:460px;
+	position:relative;
+}
+.banner-slide{
+	width:1200px;
+	height:460px;
+	background-repeat:no-repeat;
+	position:absolute;
+	display: none;
+}
+.slide1{
+	background-image:url(../img/bg1.jpg);
+}
+.slide2{
+	background-image: url(../img/bg2.jpg);
+}
+.slide3{
+	background-image: url(../img/bg3.jpg);
+}
+.slide-active{
+	display: block;
+}
+.button{
+	position: absolute;
+	/*此处为相对mian定位*/
+	width:40px;
+	height:80px;
+	left:244px;
+	top:50%;
+	margin-top:-40px;
+	background:url(../img/arrow.png) no-repeat center center;
+}
+.next{
+	left:auto;
+	right:0px;
+}
+.prev{
+	transform: rotate(180deg);
+}
+  /*不用span 用a因为有hover的属性*/
+.button:hover{
+	background-color:#333;
+	opacity:0.6;
+	/*兼容不支持opcity的浏览器*/
+	/*filter:alpha(opcity=80);*/
+}
+.dots{
+	position: absolute;
+	right:10px;
+	bottom:24px;
+	text-align: right;
+}
+.dots span{
+	display: inline-block;
+	width:12px;
+	height:12px;
+	line-height: 12px;
+	border-radius: 50%;
+	background-color: rgba(7,17,27,0.4);
+	box-shadow:0 0 0 2px rgba(255,255,255,0.8) inset;
+	margin-left: 8px;
+	/*点击点时出现手型*/
+	cursor: pointer;
+}
+.dots span.active{
+	box-shadow:0 0 0 2px rgba(7,17,27,0.4) inset;
+	background-color: #fff;
+}
